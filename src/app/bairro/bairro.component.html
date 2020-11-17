@@ -1,0 +1,10 @@
+<div class="form-group" [formGroup]="parentFormGroup">
+    <mat-form-field appearance="fill">
+        <mat-label>Bairro</mat-label>
+        <mat-select formControlName="bairro" (selectionChange)="selecionaBairro($event)">
+            <mat-option *ngFor="let bairro of bairrosFiltro" [value]="bairro">
+                {{bairro.nome}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

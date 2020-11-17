@@ -1,0 +1,32 @@
+<div>
+    <form [formGroup]="homeForm">
+        <p>
+            <mat-toolbar>
+                <span>Desafio DIO</span>
+            </mat-toolbar>
+        </p>
+        <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile>
+                <app-estado [parentFormGroup]="homeForm"></app-estado>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-cidade [parentFormGroup]="homeForm"></app-cidade>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <app-bairro [parentFormGroup]="homeForm"></app-bairro>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button type="button" mat-raised-button color="primary" (click)="enviar()">Enviar</button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-content>
+                        <p>
+                            &nbsp;{{ result }}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>

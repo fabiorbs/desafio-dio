@@ -1,0 +1,10 @@
+<div class="form-group" [formGroup]="parentFormGroup">
+    <mat-form-field appearance="fill">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estado" (selectionChange)="listaCidades($event)">
+            <mat-option *ngFor="let estado of estados" [value]="estado">
+                {{estado.nome}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
